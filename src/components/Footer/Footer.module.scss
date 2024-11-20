@@ -1,0 +1,22 @@
+.footerContainer {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  a {
+    text-decoration: none;
+    align-items: center;
+    color: black;
+  }
+  i {
+    display: flex;
+    font-size: 24px;
+    p {
+      margin-left: 10px;
+      font-size: 20px;
+      font-family: "Roboto", sans-serif;
+    }
+  }
+}

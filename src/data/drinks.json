@@ -1,0 +1,359 @@
+[
+  {
+    "title": "Кофе",
+    "id": 1,
+    "subcategories": [
+      {
+        "title": "Эспрессо",
+        "id": 1,
+        "volumes": [
+          { "volume": "30мл", "price": 5.5 },
+          { "volume": "60мл", "price": 6.5 }
+        ]
+      },
+      {
+        "title": "Американо",
+        "id": 2,
+        "volumes": [
+          { "volume": "175мл", "price": 5.5 },
+          { "volume": "200мл", "price": 6.5 }
+        ]
+      },
+      {
+        "title": "Флет Уайт",
+        "id": 3,
+        "volumes": [{ "volume": "250мл", "price": 7.5 }]
+      },
+      {
+        "title": "Капучино",
+        "id": 4,
+        "volumes": [
+          { "volume": "250мл", "price": 6.5 },
+          { "volume": "350мл", "price": 7.0 },
+          { "volume": "450мл", "price": 8.0 }
+        ]
+      },
+      {
+        "title": "Гляссе",
+        "id": 5,
+        "volumes": [{ "volume": "250мл", "price": 7.5 }]
+      },
+      {
+        "title": "Латте",
+        "id": 6,
+        "volumes": [
+          { "volume": "250мл", "price": 6.5 },
+          { "volume": "350мл", "price": 7.0 },
+          { "volume": "450мл", "price": 8.0 }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Молочные Коктейли",
+    "id": 2,
+    "subcategories": [
+      {
+        "title": "Классический",
+        "id": 1,
+        "volumes": [{ "volume": "450мл", "price": 8.5 }]
+      },
+      {
+        "title": "Клубнично-банановый",
+        "id": 2,
+        "volumes": [{ "volume": "450мл", "price": 8.5 }]
+      },
+      {
+        "title": "Банано-клубничный",
+        "id": 3,
+        "volumes": [{ "volume": "450мл", "price": 8.5 }]
+      },
+      {
+        "title": "Пина колада",
+        "id": 4,
+        "volumes": [{ "volume": "450мл", "price": 8.5 }]
+      },
+      {
+        "title": "Сникерс",
+        "id": 5,
+        "volumes": [{ "volume": "450мл", "price": 9.0 }]
+      },
+      {
+        "title": "Баунти",
+        "id": 6,
+        "volumes": [{ "volume": "450мл", "price": 9.0 }]
+      }
+    ]
+  },
+  {
+    "title": "Смузи",
+    "id": 3,
+    "subcategories": [
+      {
+        "title": "Ягодный",
+        "id": 1,
+        "volumes": [{ "volume": "350мл", "price": 9.0 }]
+      },
+      {
+        "title": "Яблоко-клбуника-банан",
+        "id": 2,
+        "volumes": [{ "volume": "350мл", "price": 9.0 }]
+      },
+      {
+        "title": "Шпинат-клубника",
+        "id": 3,
+        "volumes": [{ "volume": "350мл", "price": 9.0 }]
+      },
+      {
+        "title": "Банан-ягоды",
+        "id": 4,
+        "volumes": [{ "volume": "350мл", "price": 9.0 }]
+      }
+    ]
+  },
+  {
+    "title": "Кофейные напитки",
+    "id": 4,
+    "subcategories": [
+      {
+        "title": "Латте Солёная карамель",
+        "id": 1,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Капучино Лесной орех",
+        "id": 2,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Халвичный Латте",
+        "id": 3,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Моккачино",
+        "id": 4,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Мокко",
+        "id": 5,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Раф",
+        "id": 6,
+        "volumes": [
+          { "volume": "250мл", "price": 7.0 },
+          { "volume": "350мл", "price": 8.0 },
+          { "volume": "450мл", "price": 8.5 }
+        ]
+      },
+      {
+        "title": "Лавандовый Раф",
+        "id": 7,
+        "volumes": [
+          { "volume": "250мл", "price": 7.5 },
+          { "volume": "350мл", "price": 8.5 },
+          { "volume": "450мл", "price": 9.0 }
+        ]
+      },
+      {
+        "title": "Какао",
+        "id": 8,
+        "volumes": [
+          { "volume": "250мл", "price": 6.0 },
+          { "volume": "350мл", "price": 7.0 },
+          { "volume": "450мл", "price": 8.0 }
+        ]
+      },
+      {
+        "title": "Айс Кофе",
+        "id": 9,
+        "volumes": [{ "volume": "400мл", "price": 8.0 }]
+      },
+      {
+        "title": "Эспрессо тоник",
+        "id": 10,
+        "volumes": [{ "volume": "400мл", "price": 8.0 }]
+      },
+      {
+        "title": "Бамбл Кофе",
+        "id": 11,
+        "volumes": [{ "volume": "400мл", "price": 8.0 }]
+      }
+    ]
+  },
+  {
+    "title": "Матча",
+    "id": 5,
+    "subcategories": [
+      {
+        "title": "Матча",
+        "id": 1,
+        "volumes": [{ "volume": "100мл", "price": 6.0 }]
+      },
+      {
+        "title": "Матча Латте",
+        "id": 2,
+        "volumes": [
+          { "volume": "200мл", "price": 8.5 },
+          { "volume": "350мл", "price": 9.5 }
+        ]
+      },
+      {
+        "title": "Фреш Матча",
+        "id": 3,
+        "volumes": [{ "volume": "400мл", "price": 8.0 }]
+      },
+      {
+        "title": "Матча Органик",
+        "id": 4,
+        "volumes": [{ "volume": "400мл", "price": 7.0 }]
+      }
+    ]
+  },
+  {
+    "title": "Авторский Чай",
+    "id": 6,
+    "subcategories": [
+      {
+        "title": "Малиновый",
+        "id": 1,
+        "volumes": [{ "volume": "500 мл", "price": 8.5 }]
+      },
+      {
+        "title": "Малиново-имбирный",
+        "id": 2,
+        "volumes": [{ "volume": "500 мл", "price": 8.5 }]
+      },
+      {
+        "title": "Облепиховый",
+        "id": 3,
+        "volumes": [{ "volume": "500 мл", "price": 8.5 }]
+      },
+      {
+        "title": "Вишня-мята",
+        "id": 4,
+        "volumes": [{ "volume": "500 мл", "price": 8.5 }]
+      }
+    ]
+  },
+  {
+    "title": "Напитки",
+    "id": 7,
+    "subcategories": [
+      {
+        "title": "Вода без газа",
+        "id": 1,
+        "volumes": [{ "volume": "500 мл", "price": 3.0 }]
+      },
+      {
+        "title": "Вода Газированная",
+        "id": 2,
+        "volumes": [{ "volume": "500 мл", "price": 3.0 }]
+      },
+      {
+        "title": "Пепси",
+        "id": 3,
+        "volumes": [{ "volume": "500 мл", "price": 4.0 }]
+      },
+      {
+        "title": "Пепси без сахара",
+        "id": 4,
+        "volumes": [{ "volume": "500 мл", "price": 4.0 }]
+      },
+      {
+        "title": "Миринда",
+        "id": 5,
+        "volumes": [{ "volume": "500 мл", "price": 4.0 }]
+      },
+      {
+        "title": "Севен Ап",
+        "id": 6,
+        "volumes": [{ "volume": "500 мл", "price": 4.0 }]
+      },
+      {
+        "title": "Сок Добрый(Апельсин)",
+        "id": 7,
+        "volumes": [{ "volume": "250 мл", "price": 3.5 }]
+      },
+      {
+        "title": "Морс (Виноград-Клюква)",
+        "id": 8,
+        "volumes": [{ "volume": "250 мл", "price": 3.5 }]
+      }
+    ]
+  },
+  {
+    "title": "Лимонад",
+    "id": 8,
+    "subcategories": [
+      {
+        "title": "Арбуз-Базилик",
+        "id": 1,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Чёрная смородина-Мята",
+        "id": 2,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Мохито Мята",
+        "id": 3,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Ямайка",
+        "id": 4,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Красная Смородина-Ревень",
+        "id": 5,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Мятный морс",
+        "id": 6,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Сангрия",
+        "id": 7,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Киви-Фейхуа",
+        "id": 8,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      },
+      {
+        "title": "Мохито Клубника",
+        "id": 9,
+        "volumes": [{ "volume": "350мл", "price": 7.5 }]
+      }
+    ]
+  }
+]
