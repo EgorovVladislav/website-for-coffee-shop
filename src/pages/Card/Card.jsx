@@ -39,8 +39,18 @@ export default function Card({ products, onAddToCart }) {
     setSelectedVolumes(autoSelectVolumes);
   }, [products]);
 
-  const handleAddToCart = (title, price, volume, quantity) => {
-    const newItem = { title, price, volume, quantity };
+  const handleAddToCart = (title, price, volume, quantity, id) => {
+    const selectedVolume = selectedVolumes[id]; // Получаем выбранный объем для текущей карточки
+    if (!selectedVolume) {
+      return; // Прерываем выполнение функции, если объем не выбран
+    }
+
+    const newItem = {
+      title,
+      price: selectedVolume.volumePrice,
+      volume: selectedVolume.volume,
+      quantity,
+    };
     onAddToCart(newItem);
   };
 
@@ -100,11 +110,13 @@ export default function Card({ products, onAddToCart }) {
               onClick={() =>
                 handleAddToCart(
                   title,
-                  selectedVolume ? selectedVolume.volumePrice : price, // Передаем цену за единицу
+                  selectedVolume ? selectedVolume.volumePrice : price,
                   selectedVolume ? selectedVolume.volume : null,
-                  selectedQuantity
+                  selectedQuantity,
+                  id
                 )
               }
+              disabled={!selectedVolume}
             >
               В корзину
             </button>

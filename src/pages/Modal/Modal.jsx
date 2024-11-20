@@ -6,7 +6,7 @@ export default function Modal({ closeModal, items, onRemoveItem }) {
 
   useEffect(() => {
     const initialQuantities = items.reduce((acc, item) => {
-      acc[item.title] = item.quantity || 1; // Убедитесь, что количество инициализируется
+      acc[item.title] = item.quantity || 1;
       return acc;
     }, {});
     setQuantities(initialQuantities);
@@ -30,7 +30,7 @@ export default function Modal({ closeModal, items, onRemoveItem }) {
   };
 
   const handleRemoveItem = (title) => {
-    onRemoveItem(title); // Вызов функции удаления товара
+    onRemoveItem(title);
   };
 
   const totalPrice = Object.keys(quantities).reduce((total, title) => {

@@ -11,7 +11,6 @@ import kitchenData from "../../data/kitchen.json";
 import addImgData from "../../common/addDataImg";
 
 export default function Menu({ onAddToCart }) {
-  // Добавляем пропс onAddToCart
   const [products, setProducts] = useState([]);
   const [navItem, setNavItem] = useState([]);
   const [activeNavIndex, setActiveNavIndex] = useState(0);
@@ -101,8 +100,7 @@ export default function Menu({ onAddToCart }) {
       </div>
 
       <div className={st.wrapperContainer}>
-        <Card products={products} onAddToCart={onAddToCart} />{" "}
-        {/* Передаем onAddToCart в Card */}
+        <Card products={products} onAddToCart={onAddToCart} />
       </div>
     </div>
   );

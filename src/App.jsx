@@ -27,10 +27,14 @@ function App() {
       prevItems.filter((item) => item.title !== title)
     );
   };
+  const totalItems = cartItems.reduce(
+    (total, item) => total + (item.quantity || 1),
+    0
+  );
   return (
     <Router>
       <div className={st.appContainer}>
-        <Header openModal={toggleModal} />
+        <Header openModal={toggleModal} totalItems={totalItems} />
         <Routes>
           <Route path="/" element={<Main />}>
             <Route path="/" element={<Home />} />

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import st from "./Nav.module.scss";
 import logo from "../../assets/logoWaffles.png";
 
-export default function Nav({ openModal }) {
+export default function Nav({ openModal, totalItems }) {
   return (
     <nav className={st.container}>
       <div className={st.containerLogo}>
@@ -39,6 +39,7 @@ export default function Nav({ openModal }) {
       <div className={st.containerBasket}>
         <button className={st.cartButton} onClick={openModal}>
           <i className="fa fa-shopping-basket"></i>
+          {totalItems > 0 && <span className={st.itemCount}>{totalItems}</span>}
         </button>
       </div>
     </nav>
