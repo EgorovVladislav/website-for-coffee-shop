@@ -19,7 +19,22 @@ function App() {
   };
 
   const handleAddToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find(
+        (cartItem) =>
+          cartItem.title === item.title && cartItem.volume === item.volume
+      );
+      if (existingItem) {
+        // Если товар уже есть, увеличиваем количество
+        return prevItems.map((cartItem) =>
+          cartItem.title === item.title && cartItem.volume === item.volume
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            : cartItem
+        );
+      }
+      // Если товара нет, добавляем новый
+      return [...prevItems, item];
+    });
   };
 
   const handleRemoveItem = (title) => {
@@ -27,10 +42,19 @@ function App() {
       prevItems.filter((item) => item.title !== title)
     );
   };
+
   const totalItems = cartItems.reduce(
     (total, item) => total + (item.quantity || 1),
     0
   );
+  const handleUpdateQuantity = (title, newQuantity) => {
+    setCartItems((prevItems) => {
+      return prevItems.map((item) =>
+        item.title === title ? { ...item, quantity: newQuantity } : item
+      );
+    });
+  };
+
   return (
     <Router>
       <div className={st.appContainer}>
@@ -51,6 +75,7 @@ function App() {
             closeModal={toggleModal}
             items={cartItems}
             onRemoveItem={handleRemoveItem}
+            onUpdateQuantity={handleUpdateQuantity}
           />
         )}
         <Footer />

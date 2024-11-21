@@ -40,17 +40,20 @@ export default function Card({ products, onAddToCart }) {
   }, [products]);
 
   const handleAddToCart = (title, price, volume, quantity, id) => {
-    const selectedVolume = selectedVolumes[id]; // Получаем выбранный объем для текущей карточки
-    if (!selectedVolume) {
-      return; // Прерываем выполнение функции, если объем не выбран
+    const selectedVolume = selectedVolumes[id];
+    const hasVolumes = products.find((product) => product.id === id)?.volumes;
+
+    if (hasVolumes && !selectedVolume) {
+      return;
     }
 
     const newItem = {
       title,
-      price: selectedVolume.volumePrice,
-      volume: selectedVolume.volume,
+      price: selectedVolume ? selectedVolume.volumePrice : price,
+      volume: selectedVolume ? selectedVolume.volume : null,
       quantity,
     };
+
     onAddToCart(newItem);
   };
 
@@ -104,7 +107,6 @@ export default function Card({ products, onAddToCart }) {
               <span>{selectedQuantity}</span>
               <button onClick={() => incrementQuantity(id)}>+</button>
             </div>
-
             <button
               className={st.basket}
               onClick={() =>
@@ -116,7 +118,7 @@ export default function Card({ products, onAddToCart }) {
                   id
                 )
               }
-              disabled={!selectedVolume}
+              disabled={volumes && !selectedVolume}
             >
               В корзину
             </button>

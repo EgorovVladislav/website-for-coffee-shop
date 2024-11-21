@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import st from "./Modal.module.scss";
 
-export default function Modal({ closeModal, items, onRemoveItem }) {
+export default function Modal({ closeModal, items, onRemoveItem, onUpdateQuantity }) {
   const [quantities, setQuantities] = useState({});
 
   useEffect(() => {
@@ -33,6 +33,15 @@ export default function Modal({ closeModal, items, onRemoveItem }) {
     onRemoveItem(title);
   };
 
+  const handleClose = () => {
+    // Передаем обновленные количества в родительский компонент
+    items.forEach((item) => {
+      const newQuantity = quantities[item.title] || 1;
+      onUpdateQuantity(item.title, newQuantity);
+    });
+    closeModal();
+  };
+
   const totalPrice = Object.keys(quantities).reduce((total, title) => {
     const item = items.find((item) => item.title === title);
     return total + (item ? item.price * quantities[title] : 0);
@@ -41,7 +50,7 @@ export default function Modal({ closeModal, items, onRemoveItem }) {
   return (
     <div className={st.containerModal}>
       <div className={st.modalContent}>
-        <button onClick={closeModal} className={st.closeButton}>
+        <button onClick={handleClose} className={st.closeButton}>
           Закрыть
         </button>
         <h2>Корзина</h2>
@@ -52,7 +61,7 @@ export default function Modal({ closeModal, items, onRemoveItem }) {
             <div className={st.containerBasket}>
               {Object.keys(quantities).map((title) => {
                 const item = items.find((item) => item.title === title);
-                if (!item) return null; // Проверка на наличие элемента
+                if (!item) return null;
                 const itemTotalPrice = item.price * quantities[title];
                 return (
                   <div key={title} className={st.containerLi}>
