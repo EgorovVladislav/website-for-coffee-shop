@@ -42,7 +42,6 @@ export default function Card({ products, onAddToCart }) {
   const handleAddToCart = (title, price, volume, quantity, id) => {
     const selectedVolume = selectedVolumes[id];
     const hasVolumes = products.find((product) => product.id === id)?.volumes;
-
     if (hasVolumes && !selectedVolume) {
       return;
     }

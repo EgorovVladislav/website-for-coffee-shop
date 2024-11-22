@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import st from "./Modal.module.scss";
 
-export default function Modal({ closeModal, items, onRemoveItem, onUpdateQuantity }) {
+export default function Modal({
+  closeModal,
+  items,
+  onRemoveItem,
+  onUpdateQuantity,
+}) {
   const [quantities, setQuantities] = useState({});
 
   useEffect(() => {
@@ -95,6 +100,7 @@ export default function Modal({ closeModal, items, onRemoveItem, onUpdateQuantit
               })}
             </div>
             <h3>Итоговая стоимость: {totalPrice} р.</h3>
+            <button>Оформить заказ</button>
           </>
         )}
       </div>

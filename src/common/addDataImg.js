@@ -34,8 +34,13 @@ const arrImg = {
     dessert8,
     dessert9,
   ],
-  coffee: [coffee1, coffee2, coffee3, coffee4, coffee5, coffee6],
-  milkshake: [
+  drinks: [
+    coffee1,
+    coffee2,
+    coffee3,
+    coffee4,
+    coffee5,
+    coffee6,
     milkshake1,
     milkshake2,
     milkshake3,

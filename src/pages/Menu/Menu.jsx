@@ -31,6 +31,10 @@ export default function Menu({ onAddToCart }) {
         data: dessertData,
         title: "desserts",
       });
+      newFunction(updatedProducts);
+    }
+
+    function newFunction(updatedProducts) {
       setProducts(updatedProducts);
     }
   };
@@ -40,6 +44,7 @@ export default function Menu({ onAddToCart }) {
     const selectedSubcategory = subcategories[index];
     if (selectedSubcategory && selectedSubcategory.subcategories) {
       setProducts(selectedSubcategory.subcategories);
+      console.log(subcategories[index]); /////////// добавление картинок
     }
   };
 
